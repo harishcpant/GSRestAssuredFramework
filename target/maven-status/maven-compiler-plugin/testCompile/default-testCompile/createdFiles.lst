@@ -1,0 +1,7 @@
+pageobjects\ui\secureareaPage.class
+pageobjects\ui\loginPage.class
+pageobjects\ui\welcomePage.class
+perf\perfAPI.class
+stepDefinitions\api\apiStepdef.class
+stepDefinitions\ui\uiStepDef.class
+cucumber\Options\TestRunner.class
