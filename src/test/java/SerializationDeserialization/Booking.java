@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 "bookingdates",
 "additionalneeds"
 })
-
+//Pojo class
 public class Booking {
 
 @JsonProperty("firstname")
