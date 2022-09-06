@@ -1,13 +1,10 @@
 package core.common;
 
-import io.cucumber.java.After;
+import org.testng.annotations.AfterSuite;
 
-public class Hooks {
-    @After
-    public void beforeScenario()  {
-      System.out.print("Closing connection.");
-      
-    }
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 
+public class Hooks   {
+	
 }
 

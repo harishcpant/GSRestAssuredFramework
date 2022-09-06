@@ -12,5 +12,4 @@ public class secureareaPage {
 	public String getPageUrl() {
 		return driver.getCurrentUrl();
 	}
-
 }

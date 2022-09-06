@@ -4,7 +4,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
-public class GetEnvDetails {
+import org.apache.log4j.Logger;
+
+public class GetEnvDetails extends GetLogger {
 	public static Properties getEnvDetails()
 	{
 		FileReader reader;

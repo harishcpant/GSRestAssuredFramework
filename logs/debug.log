@@ -1,0 +1,7 @@
+2022-01-31 16:35:33 INFO  GetLogger:20 - Test Environement : QA
+2022-01-31 16:35:34 INFO  GetLogger:41 - Request Specification generated for : PlaceAPIBaseURL
+2022-01-31 16:35:36 INFO  GetLogger:68 - httpMethod is: POST and infoUrl is: maps/api/place/add/json
+2022-01-31 16:35:36 INFO  GetLogger:69 - AddPlaceAPI API Call Response : {"status":"OK","place_id":"a9bb5d31f509c565fabffa94ecea1950","scope":"APP","reference":"fd96cb34f997e09c463a3daee43e33edfd96cb34f997e09c463a3daee43e33ed","id":"fd96cb34f997e09c463a3daee43e33ed"}
+2022-01-31 16:35:36 INFO  GetLogger:93 - placeId is : a9bb5d31f509c565fabffa94ecea1950
+2022-01-31 16:35:41 INFO  GetLogger:22 - Report Generation Started.
+2022-01-31 16:35:43 INFO  GetLogger:42 - Report Generation Done.

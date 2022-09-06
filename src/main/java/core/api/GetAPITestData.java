@@ -5,9 +5,7 @@ import java.util.Properties;
 import org.json.simple.parser.JSONParser;
 import core.common.GetEnvDetails;
 
-
-
-public class GetAPITestData {
+public class GetAPITestData  {
 	static Properties p=GetEnvDetails.getEnvDetails();
 	public static String getAPITestData(String apiFileName)
 	{

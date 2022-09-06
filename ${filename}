@@ -1,0 +1,6 @@
+2020-07-14 17:54:14 INFO  GetLogger:20 - Test Environement : QA
+2020-07-14 17:54:15 INFO  GetLogger:35 - Request Specification generated for : PlaceAPIBaseURL
+2020-07-14 17:54:16 INFO  GetLogger:56 - Add Payload step Completed.
+2020-07-14 17:54:20 INFO  GetLogger:75 - httpMethod is : POST
+2020-07-14 17:54:27 INFO  GetLogger:22 - Report Generation Started.
+2020-07-14 17:54:28 INFO  GetLogger:42 - Resport Generation Done.

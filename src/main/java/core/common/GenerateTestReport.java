@@ -9,13 +9,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 
 
 public class GenerateTestReport {
-
+	Logger logger=GetLogger.getLogger();
 	public void generateCucumberReport() {
+		logger.info("Report Generation Started.");
 		String fileName = System.getProperty("user.dir")+"1001";
 		long build = readLong(fileName, 1L);
 		String buildNumber = Long.toString(build);
@@ -25,7 +29,6 @@ public class GenerateTestReport {
 			e.printStackTrace();
 		}
 		
-		//String buildNumber = "1001";
 		File reportOutputDirectory = new File("target/build"+buildNumber);
 		List<String> jsonFiles = new ArrayList<>();
 		jsonFiles.add(System.getProperty("user.dir") + "\\target\\cucumber.json");
@@ -34,16 +37,9 @@ public class GenerateTestReport {
 		Configuration configuration = new Configuration(reportOutputDirectory, projectName);
 		configuration.setBuildNumber(buildNumber);
 
-//		configuration.addClassifications("Browser", "Chrome");
-//		configuration.addClassifications("Branch", "release/1.0");
-//		configuration.addClassifications("Server", BaseTestStepDef.server);
-//		configuration.setSortingMethod(SortingMethod.NATURAL);
-//		configuration.addPresentationModes(PresentationMode.EXPAND_ALL_STEPS);
-//		configuration.addPresentationModes(PresentationMode.PARALLEL_TESTING);
-//		configuration.setTrendsStatsFile(new File("target/test-classes/demo-trends.json"));
-
 		ReportBuilder reportBuilder = new ReportBuilder(jsonFiles, configuration);
 		reportBuilder.generateReports();
+		logger.info("Report Generation Done.");
 	}
 
 	public static void writeLong(String filename, long number) throws IOException {

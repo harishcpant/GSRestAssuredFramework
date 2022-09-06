@@ -1,16 +1,6 @@
 package stepDefinitions.ui;
 
-import static org.testng.Assert.assertEquals;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import core.ui.webdriverCore;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -31,26 +21,12 @@ public class uiStepDef {
 		welcomepage=new welcomePage();
 		welcomepage.openPage();
 		loginpage=welcomepage.clickFormAuthenticationLink();		
-		
-//		driver.findElement(By.linkText("Form Authentication")).click();
-//		driver.findElement(By.id("username")).sendKeys("tomsmith");
-//		driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
-//		WebDriverWait wait=new WebDriverWait(driver,10);
-//		WebElement loginButton=driver.findElement(By.className("radius"));
-//		wait.until(ExpectedConditions.elementToBeClickable(loginButton));
-//		loginButton.click();
-//		
-//		String expectedUrl="http://the-internet.herokuapp.com/secure";
-//		System.out.println("Current URL -->"+driver.getCurrentUrl());
-//		Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
-//		
-//		driver.quit();
-		
+
 	}
 
-	@When("I enter the valid username and password")
-	public void i_enter_the_username_password() {
-		securedareapage=loginpage.logIn();
+	@When("I enter the valid (.*) and (.*)")
+	public void i_enter_the_username_password(String userName,String password) {
+		securedareapage=loginpage.logIn(userName,password);
 	}
 
 	@Then("I should land successfully to secure area page")
@@ -62,9 +38,9 @@ public class uiStepDef {
 	}
 	
 	
-	@When("I enter the invalid username and password")
-	public void i_enter_the_invalid_username_and_password() {
-		actualErrorMessage=loginpage.NegativelogIn();
+	@When("I enter the invalid (.*) and (.*)")
+	public void i_enter_the_invalid_username_and_password(String userName,String password) {
+		actualErrorMessage=loginpage.NegativelogIn(userName,password);
 		System.out.println("errorMessage-->"+actualErrorMessage);
 	}
 
