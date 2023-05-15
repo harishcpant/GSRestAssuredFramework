@@ -27,8 +27,8 @@ Body:
     "language": "Hindi"
 }
 HTTP/1.1 200 OK
-Date: Mon, 31 Jan 2022 11:04:52 GMT
-Server: Apache/2.4.18 (Ubuntu)
+Date: Fri, 16 Sep 2022 08:41:01 GMT
+Server: Apache/2.4.41 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
 Access-Control-Max-Age: 3600
@@ -40,8 +40,8 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "a9bb5d31f509c565fabffa94ecea1950",
+    "place_id": "6029fcbc360f2098440bab8a8ecc2deb",
     "scope": "APP",
-    "reference": "fd96cb34f997e09c463a3daee43e33edfd96cb34f997e09c463a3daee43e33ed",
-    "id": "fd96cb34f997e09c463a3daee43e33ed"
+    "reference": "d19818afa34bce7638782c238c4b4dacd19818afa34bce7638782c238c4b4dac",
+    "id": "d19818afa34bce7638782c238c4b4dac"
 }

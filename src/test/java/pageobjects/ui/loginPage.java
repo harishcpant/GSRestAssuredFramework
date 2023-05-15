@@ -23,7 +23,7 @@ public class loginPage {
 		driver.findElement(By.id("password")).sendKeys(password);
 		WebDriverWait wait=new WebDriverWait(driver,10);
 		WebElement loginButton=driver.findElement(By.className("radius"));
-		wait.until(ExpectedConditions.elementToBeClickable(loginButton));
+		//wait.until(ExpectedConditions.elementToBeClickable(loginButton));
 		loginButton.click();
 		return new secureareaPage(driver);
 	}
@@ -33,7 +33,7 @@ public class loginPage {
 		driver.findElement(By.id("password")).sendKeys(password);
 		WebDriverWait wait=new WebDriverWait(driver,10);
 		WebElement loginButton=driver.findElement(By.className("radius"));
-		wait.until(ExpectedConditions.elementToBeClickable(loginButton));
+		//wait.until(ExpectedConditions.elementToBeClickable(loginButton));
 		loginButton.click();		
 		return driver.findElement(By.id("flash")).getText();
 	}
